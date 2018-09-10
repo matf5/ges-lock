@@ -29,7 +29,7 @@ export default {
   methods: {
     validatePwd(pwd) {
       if (pwd === this.pwd) {
-        this.$message('解锁成功');
+        this.$toast('解锁成功');
         return true;
       }
       return false;
@@ -38,7 +38,7 @@ export default {
       this.drawPwd = pwd;
     },
     onSetSuccess(pwd) {
-      this.$message(`设置成功,${pwd}`);
+      this.$toast(`设置成功,${pwd}`);
       this.pwd = pwd;
       this.hasPwd = true;
     }
